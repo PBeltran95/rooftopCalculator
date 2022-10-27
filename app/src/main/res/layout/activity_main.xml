@@ -41,7 +41,8 @@
         android:layout_marginBottom="@dimen/common_max_margin"
         android:text="@string/zero"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/btn_two" />
+        app:layout_constraintStart_toStartOf="@+id/btn_two"
+        tools:ignore="DuplicateSpeakableTextCheck" />
 
     <Button
         android:id="@+id/btn_comma"
