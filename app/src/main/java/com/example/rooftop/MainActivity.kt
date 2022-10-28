@@ -60,8 +60,14 @@ class MainActivity : AppCompatActivity() {
         btnNine.setOnClickListener { setChar("9") }
         btnComma.setOnClickListener { setChar(".") }
 
-        btnDelete.setOnClickListener { deleteChar() }
-        btnDeleteAll.setOnClickListener { deleteAll() }
+        btnDelete.setOnClickListener {
+            deleteChar()
+            isOperationCompleted = false
+        }
+        btnDeleteAll.setOnClickListener {
+            deleteAll()
+            restoreDefaultZero()
+        }
         btnDeleteLocal.setOnClickListener { deleteAll() }
 
 
@@ -117,6 +123,10 @@ class MainActivity : AppCompatActivity() {
 
         btnEquals.setOnClickListener { makeOperation() }
 
+    }
+
+    private fun restoreDefaultZero() {
+        firstTerm = 0.0
     }
 
     private fun invertNumber() {
